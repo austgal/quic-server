@@ -4,12 +4,13 @@ A pub/sub message broker server that communicates via QUIC.
 
 ## 3rd party packages:
 - [quic-go](https://pkg.go.dev/github.com/lucas-clemente/quic-go) - a QUIC implementation in pure Go
+- [testify](https://pkg.go.dev/github.com/stretchr/testify) - a testing framework for Go.
 
 ## Server specifications:
-- Accepts QUIC connections on 2 ports - Publisher port and Subscriber port
-- The server notifies publishers if a subscriber has connected
-- If no subscribers are connected, the server must inform the publishers
-- The server sends any messages received from publishers to all connected subscribers
+- Accepts QUIC connections on 2 ports - publisher port and subscriber port.
+- The server notifies publishers when a subscriber has connected.
+- If no subscribers are connected, the server informs the publishers.
+- The server sends any messages received from publishers to all connected subscribers.
 
 ## Usage
 ### Build image:
